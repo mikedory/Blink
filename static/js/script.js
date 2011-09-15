@@ -2,10 +2,10 @@
 
 */
 // load jquery, then set the onload event
-google.load("jquery", "1.3");
+google.load("jquery", "1.6.2");
 google.setOnLoadCallback(function() {
 
-	$('.blinksize').textfill({ maxFontPixels: 7000 })
+	$('.blinksize').textfill({ maxFontPixels: 700 })
 
 
 	// set me some intervals
