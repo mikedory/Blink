@@ -1,0 +1,6 @@
+Flask==0.7.2
+Tornado==2.0
+Jinja2==2.6
+Werkzeug==0.7.1
+simplejson==2.2.1
+wsgiref==0.1.2
