@@ -20,7 +20,7 @@ google.setOnLoadCallback(function() {
 		var randomnumber=Math.floor(Math.random()*999)
 		changeBodyColor('#'+randomnumber);
 
-	}, 800);
+	}, 200);
 
 	// change the color to something
 	function changeBodyColor(color) {
