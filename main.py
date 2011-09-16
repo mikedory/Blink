@@ -6,13 +6,8 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import unicodedata
-
-# import and define tornado-y things
 from tornado.options import define, options
 
-##############
-## main app ##
-##############
 
 # application settings and handle mapping info
 class Application(tornado.web.Application):
@@ -28,6 +23,7 @@ class Application(tornado.web.Application):
 		)
 		tornado.web.Application.__init__(self, handlers, **settings)
 
+
 # teh main page
 class MainHandler(tornado.web.RequestHandler):
 	def get(self, phrase):
@@ -42,10 +38,7 @@ def main():
 	tornado.options.parse_command_line()
 	http_server = tornado.httpserver.HTTPServer(Application())
 	http_server.listen(os.environ.get("PORT", 5000))
-
-	#start it up
 	tornado.ioloop.IOLoop.instance().start()
-
 
 if __name__ == "__main__":
 	main()
