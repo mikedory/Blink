@@ -27,6 +27,6 @@ If you have one, it'll load the tracking urchin.  If you don't, the Tornado temp
 
 And let's say you'd like to give yourself some props in the footer.  I mean, people do that sometimes, right?  Easy!
 
-	heroku config:add GOOGLEANALYTICSID=[your_twitter_name]
+	heroku config:add TWITTERHANDLE=[your_twitter_handle]
 
 Again, if you put this in the environment, it'll show the footer.  If not, it'll just skip it.
