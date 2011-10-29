@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 import os.path
+import os
+import logging
 import tornado.escape
 import tornado.httpserver
 import tornado.ioloop
@@ -27,6 +29,7 @@ class Application(tornado.web.Application):
 # teh main page
 class MainHandler(tornado.web.RequestHandler):
 	def get(self, phrase):
+		print os.environ
 		if not phrase:
 			self.render("main.html", phrase='Sadface.', page_heading='Important info!')
 			return;
