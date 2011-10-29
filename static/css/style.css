@@ -26,7 +26,7 @@ time, mark, audio, video {
 	line-height:20px;
 }
 
-/* blink*/
+/* blink */
 
 #blinkcontainer{
 	height: 100%;
@@ -48,6 +48,19 @@ time, mark, audio, video {
 }
 
 .blink span{
-	text-align:center;
+	text-align: center;
 }
 
+/* footer */
+
+footer {
+	text-align: center;
+	position: absolute;
+	bottom: 25px;
+	width: 100%;
+	color: #777;
+}
+	footer a {
+		text-decoration: none;
+		color: #89CFF0;
+	}
