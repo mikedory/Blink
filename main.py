@@ -33,12 +33,20 @@ class MainHandler(tornado.web.RequestHandler):
 			google_analytics_id = os.environ['GOOGLEANALYTICSID']
 		else:
 			google_analytics_id = False
+
+		if os.environ.has_key('TWITTERHANDLE'):
+			twitter_handle = os.environ['TWITTERHANDLE']
+		else:
+			twitter_handle = False
+
+
 		if not phrase:
 			self.render(
 				"main.html",
 				phrase='Sadface.',
 				page_heading='Important info!',
-				google_analytics_id=google_analytics_id
+				google_analytics_id=google_analytics_id,
+				twitter_handle=twitter_handle
 			)
 			return;
 		else:
@@ -46,7 +54,8 @@ class MainHandler(tornado.web.RequestHandler):
 				"main.html",
 				phrase=phrase,
 				page_heading='Important info!',
-				google_analytics_id=google_analytics_id
+				google_analytics_id=google_analytics_id,
+				twitter_handle=twitter_handle
 			)
 
 
