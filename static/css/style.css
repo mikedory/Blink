@@ -19,8 +19,7 @@ time, mark, audio, video {
 #main {
 	height: 700px;
 	width: 100%;
-	margin: 20px 0 0 20px;
-/* 	background-color: #999; */
+	margin: 0;
 	font-family:'GentiumAltRegular',Georgia,Times;
 	font-size:15px;
 	line-height:20px;
@@ -29,7 +28,8 @@ time, mark, audio, video {
 /* blink */
 
 #blinkcontainer{
-	height: 100%;
+	margin: 10% 0 10% 0;
+	height: 80%;
 	width: 100%;
 	text-align:center;
 	float:left;
@@ -37,9 +37,11 @@ time, mark, audio, video {
 	margin-right: auto;
 }
 
-.blink{
+.blinksize{
 	line-height:100%;
 	font-size:304px;
+	width: 90%;
+	height: 90%;
 	text-align:center;
 	margin-left: auto;
 	margin-right: auto;
