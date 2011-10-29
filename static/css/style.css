@@ -65,4 +65,5 @@ footer {
 	footer a {
 		text-decoration: none;
 		color: #89CFF0;
+		cursor: pointer;
 	}
