@@ -29,11 +29,25 @@ class Application(tornado.web.Application):
 # teh main page
 class MainHandler(tornado.web.RequestHandler):
 	def get(self, phrase):
-		print os.environ
+		if os.environ.has_key('GOOGLEANALYTICSID'):
+			google_analytics_id = os.environ['GOOGLEANALYTICSID']
+		else:
+			google_analytics_id = False
 		if not phrase:
-			self.render("main.html", phrase='Sadface.', page_heading='Important info!')
+			self.render(
+				"main.html",
+				phrase='Sadface.',
+				page_heading='Important info!',
+				google_analytics_id=google_analytics_id
+			)
 			return;
-		self.render("main.html", phrase=phrase, page_heading='Important info!')
+		else:
+			self.render(
+				"main.html",
+				phrase=phrase,
+				page_heading='Important info!',
+				google_analytics_id=google_analytics_id
+			)
 
 
 # WARM IT UP, CHRIS!
