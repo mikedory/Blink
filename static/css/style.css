@@ -1,3 +1,9 @@
+/* 
+	Author: Michael Dory
+*/
+
+/* reset *all* the things */
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
@@ -25,9 +31,10 @@ time, mark, audio, video {
 	line-height:20px;
 }
 
+
 /* blink */
 
-#blinkcontainer{
+#blinkcontainer {
 	margin: 10% 0 10% 0;
 	height: 80%;
 	width: 100%;
@@ -37,7 +44,7 @@ time, mark, audio, video {
 	margin-right: auto;
 }
 
-.blinksize{
+.blinksize {
 	line-height:100%;
 	font-size:304px;
 	width: 90%;
@@ -49,9 +56,10 @@ time, mark, audio, video {
 	color: #FAFAFA;
 }
 
-.blink span{
+.blink span {
 	text-align: center;
 }
+
 
 /* footer */
 
