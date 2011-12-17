@@ -1,4 +1,4 @@
-/* 
+/*
 	Author: Michael Dory
 */
 
@@ -6,7 +6,7 @@
 google.load("jquery", "1.6.4");
 google.setOnLoadCallback(function() {
 
-	// Change this number to determine how big you want 
+	// Change this number to determine how big you want
 	// the blinky text max font size to get
 	$('.blinksize').textfill({ maxFontPixels: 700 })
 
@@ -30,7 +30,7 @@ google.setOnLoadCallback(function() {
 	function changeBodyColor(color) {
 
 		$("body").css({'background-color':color})
-		
+
 	}
 
 });
