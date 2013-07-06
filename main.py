@@ -8,7 +8,9 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import unicodedata
-from tornado.options import define, options
+
+from tornado.options import define
+define("port", default=5000, help="run on the given port", type=int)
 
 
 # application settings and handle mapping info
@@ -39,7 +41,6 @@ class MainHandler(tornado.web.RequestHandler):
 		else:
 			twitter_handle = False
 
-
 		if not phrase:
 			self.render(
 				"main.html",
@@ -63,8 +64,9 @@ class MainHandler(tornado.web.RequestHandler):
 def main():
 	tornado.options.parse_command_line()
 	http_server = tornado.httpserver.HTTPServer(Application())
-	http_server.listen(os.environ.get("PORT", 5000))
-	tornado.ioloop.IOLoop.instance().start()
+    http_server.listen(tornado.options.options.port)
+    tornado.ioloop.IOLoop.instance().start()
+
 
 if __name__ == "__main__":
 	main()
