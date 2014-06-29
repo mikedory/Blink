@@ -1,1 +1,1 @@
-web: python main.py --port=$PORT
+web: python blink/main.py --port=$PORT
